@@ -30,4 +30,4 @@ def generate_test_file(filename, num_processes):
             arrival += random.randint(1, 100)
 
 # Example Usage   |  filename  |     n
-generate_test_file("./giant_tests.txt", 1000)  # Generate file with n processes
+generate_test_file("./more_tests.txt", 1000)  # Generate file with n processes
