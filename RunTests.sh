@@ -2,7 +2,7 @@
 
 # Settings 
 program="./Simulation"
-datafile="giant_tests.txt"
+datafile="lg_tests.txt" # Set to lg, md, or sm_tests.txt
 outputfile="results.txt"
 
 # Ranges to test for A, B, and Preemption
