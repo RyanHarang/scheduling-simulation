@@ -1,0 +1,12 @@
+P7014:4
+arrival_t:3
+exe:3
+exe:4
+terminate
+P6994:5
+arrival_t:4
+io:2
+io:4
+io:6
+exe:3
+terminate
