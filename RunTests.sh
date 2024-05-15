@@ -21,15 +21,13 @@ for A in "${values_A[@]}"; do
             # Run the simulation
             results=$($program $datafile $A $B $Preemption)
 
-            # Extract relevant values using regular expressions
-            # end_time=$(echo "$results" | grep -oP 'Start/end time: \K\d+(?=,)')
+            # Extracting results
             end_time=$(echo "$results" | grep -oP 'Start/end time: \K\d+, \d+' | cut -d ',' -f2 | tr -d ' ')
             avg_wait=$(echo "$results" | grep -oP 'Ready time average: \K\d+\.\d+')
             max_wait=$(echo "$results" | grep -oP 'Ready time maximum: \K\d+')
             min_wait=$(echo "$results" | grep -oP 'Ready time minimum: \K\d+')
 
             echo "| $A  | $B    | $Preemption   | $end_time     | $avg_wait     | $max_wait     | $min_wait |" >> $outputfile
-            # Write results to output file
         done
     done
 done
